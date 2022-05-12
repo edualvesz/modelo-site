@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <!-- page info -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OriginSix</title>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="assets/fonts/style.css">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <header id="header">
+      <nav class="container">
+        <a class="logo" href="#">beauty<span>salon.</span></a>
+        <!-- menu -->
+        <div class="menu">
+          <ul class="grid">                            <!-- these # is calling the IDs from sections tags-->
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <!-- /menu -->
+        <div class="toggle icon-menu"></div>    <!-- this class is coming from folder assets/fonts/style.css -->
+        <div class="toggle icon-close"></div>
+      </nav>
+    </header>
+    <main>
+      <section class="section" id="home">
+        <!-- its a sector of your page, generally things are separete by sectors -->
+        <div class="container grid">
+          <!-- gonna have specifc width limits --> 
+          <div class="img">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Mulher sorrindo penteando outra mulher"/>
+          </div>  
+          <div class="text">
+            <h2 class="">Saúde natural para os seus cabelos</h2>
+            <p>Um salão exclusivo em São Paulo, especializado em tratamentos naturais.</p>
+          <a class="button" href="#">Agendar um horário</a>
+         </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="image">
+            <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="tres mulheres sorrindo">
+          </div>
+            <div class="text">
+              <h2 class="title">Sobre nós</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sunt doloremque repellendus corrupti! Officia quasi ex dolore aut reiciendis beatae cupiditate iusto excepturi, dignissimos pariatur ab voluptas nobis doloribus quia!</p><br>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex voluptates earum ab. Nesciunt adipisci quam earum accusantium, numquam excepturi facere quisquam voluptatem amet corrupti delectus maiores consequatur repellendus saepe iure.</p><br>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis distinctio ex nostrum voluptate, in molestias laudantium cumque commodi velit neque architecto. Magnam illo eius optio magni libero amet! Eius, dolorum.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="section">
+        <div class="container">
+          <section class="section" id="about">
+            <div class="container grid">
+              Sobre
+            </div>
+          </section>
+          <section class="section" id="services">
+            <div class="container grid">
+              Services
+            </div>
+          </section>
+        </div>
+      </section> -->
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
