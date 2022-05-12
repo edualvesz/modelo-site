@@ -75,8 +75,17 @@ body {
   height: 1px;
   background: linear-gradient(
     270deg,
-    hsla(159, 36%, 57%, 1) 0%,
+    hsla(159, 36%, 57%, 1),
     hsla(159, 65%, 88%, 0.34)
+  );
+}
+
+.divider-2 {          /* will work with lines that are separating the pages */
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(159, 65%, 88%, 0.34),
+    hsla(159, 36%, 57%, 1)
   );
 }
 
@@ -177,6 +186,8 @@ nav.show ul.grid {
   gap: 4rem;
 }
 
+/*=========================== LAYOUT =========================*/
+
 .container {
   width: 100%;
   /* margin: 0 auto; zero above and down and automatic in sideways */
@@ -191,6 +202,10 @@ nav.show ul.grid {
 
 .section {
   padding: 5rem 0;
+}
+
+.section .title {
+  margin-bottom: 1rem;
 }
 
 /* toggle menu */
@@ -232,7 +247,7 @@ nav.show div.icon-close{
   position: absolute;
   top: -16.8%;
   left: 16.7%;
-  z-index: 1;
+  z-index: 0;
 }
 
 #home .image img{
@@ -257,4 +272,43 @@ nav.show div.icon-close{
 
 #home .text p {
   margin-bottom: 2rem;
+}
+
+/*=========================== ABOUT =========================*/
+
+#about {
+  background: white;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  top: -8.3%;
+  left: 33%;
+  z-index: 0;
+}
+
+#about .image img{
+  position: relative;
+}
+
+#about .image img,
+#about .image::before {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-left: 1.5rem;   
+  margin-right: 1.5rem;
 }
