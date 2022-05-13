@@ -1,11 +1,3 @@
-/* body {
-  background: hsl(
-    157,
-    35%,
-    54%
-  ); 
-} isso aqui facilita a escolha da cor de fundo */
-
 /*=========================== RESET =========================*/
 * {
   margin: 0; /* aqui foi retirado todos os espaços entre as caixas */
@@ -42,6 +34,11 @@ img {
 
 /*=========================== BASE =========================*/
 
+html {
+  /* makes the scrool of the page slower */
+  scroll-behavior :smooth;
+}
+
 body {
   font: 400 1rem 'DM Sans', sans-serif;
   color: var(--text-color);
@@ -75,8 +72,8 @@ body {
   height: 1px;
   background: linear-gradient(
     270deg,
-    hsla(159, 36%, 57%, 1),
-    hsla(159, 65%, 88%, 0.34)
+    hsla(var(--hue), 36%, 57%, 1),
+    hsla(var(--hue), 65%, 88%, 0.34)
   );
 }
 
@@ -84,8 +81,8 @@ body {
   height: 1px;
   background: linear-gradient(
     270deg,
-    hsla(159, 65%, 88%, 0.34),
-    hsla(159, 36%, 57%, 1)
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 57%, 1)
   );
 }
 
@@ -95,12 +92,16 @@ body {
   margin-bottom: 1rem;      /*has put a little margin in bottom header */
   display: flex;
 
-/*   position: fixed;
- */  top: 0;
+  position: fixed;
+  top: 0; 
   left: 0;
   z-index: 100;
   background-color: var(--body-color);
   width: 100%;
+}
+
+#header.scroll {
+  box-shadow:  0px 0px 12px rgba(0, 0, 0, 0.15);
 }
 
 main {
@@ -151,7 +152,7 @@ nav ul li a::after {      /* after mouse pass up it will appear a little edge */
   left: 0;
   bottom: -1.5rem;
 
-  transition: width .2s;
+  transition: width 0.2s;
 }
 
 nav ul li a:hover::after {
@@ -161,7 +162,14 @@ nav ul li a:hover::after {
 nav .menu {
   opacity: 0;
   visibility: hidden;
+  top: -20rem;
+  transition: 0.2s;
 }
+
+nav .menu ul{
+  display: none;
+} 
+
 /* shows the menu */
 nav.show .menu {    /* nav will receive the class "show" */
   opacity: 1;
@@ -175,11 +183,12 @@ nav.show .menu {    /* nav will receive the class "show" */
   position: fixed;
   top: 0;
   left: 0;
-}
-
-nav.show .menu {
   display: grid;
   place-content: center; /* counts all space in layout and brings the menu to the center */
+}
+
+nav.show .menu ul{
+  display: grid;
 }
 
 nav.show ul.grid {
@@ -189,7 +198,6 @@ nav.show ul.grid {
 /*=========================== LAYOUT =========================*/
 
 .container {
-  width: 100%;
   /* margin: 0 auto; zero above and down and automatic in sideways */
   margin-left: 1.5rem;   /* it means twenty four pixels */
   margin-right: 1.5rem;
@@ -208,6 +216,14 @@ nav.show ul.grid {
   margin-bottom: 1rem;
 }
 
+.section header {
+  margin-bottom: 4rem;
+}
+
+.section header strong {
+  color: var(--base-color);
+}
+
 /* toggle menu */
 .toggle {
   color: var(--base-color);
@@ -220,16 +236,22 @@ nav .icon-close {
   opacity: 0;
 
   position: absolute;
+  top: -1.5rem;
   right: 1.5rem;
-  /*cool transition */
+  transition: 0.2s;
 }
 
 nav.show div.icon-close{
   visibility: visible;
   opacity: 1;
+  top: 1.5rem;
 }
 
 /*=========================== HOME =========================*/
+
+#home {
+  overflow: hidden;
+}
 
 #home .container {
   margin: 0;
@@ -311,4 +333,31 @@ nav.show div.icon-close{
 #about .text {
   margin-left: 1.5rem;   
   margin-right: 1.5rem;
+}
+
+/*=========================== SERVICES =========================*/
+
+.cards.grid {
+  gap: 1.5rem;
+}
+
+.card {
+  /* distance between cards */
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--base-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+}
+
+.card i {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: var(--base-color);
+}
+
+.card .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75;
 }
