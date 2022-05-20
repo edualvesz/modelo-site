@@ -374,6 +374,31 @@ nav.show div.icon-close{
   border-radius: 0.25rem;
 }
 
+#testimonials blockquote p {
+  position: relative;
+  text-indent: 1.875rem;
+  margin-bottom: 1.5rem;
+  color: var(--title-color);
+}
+
 #testimonials blockquote p span {
   font: 700 3rem serif;
+  position: absolute; /* absolute only inside p, see above... */
+  top: -0.5rem;
+  left: -1.875rem;
+  color: var(--base-color);
+}
+
+#testimonials cite {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+
+#testimonials cite img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover; /* if the image doesn't fit correctly, the "object-fit" will cover whats remaining */
+  clip-path: circle(); /* turns image in a circular format */
+  margin-right: 0.5rem;
 }
