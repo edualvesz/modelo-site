@@ -46,11 +46,11 @@
         <!-- its a sector of your page, generally things are separete by sectors -->
         <div class="container grid">
           <!-- gonna have specifc width limits --> 
-          <div class="img">
+          <div class="image">
             <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Mulher sorrindo penteando outra mulher"/>
           </div>  
           <div class="text">
-            <h2 class="">Saúde natural para os seus cabelos</h2>
+            <h2 class="title">Saúde natural para os seus cabelos</h2>
             <p>Um salão exclusivo em São Paulo, especializado em tratamentos naturais.</p>
           <a class="button" href="#">Agendar um horário</a>
          </div>
@@ -168,26 +168,34 @@
       <!-- CONTACT -->
 
     <section class="section" id="contact">
-        <div class="container grid">
-          <div class="text">
-            <h2 class="title">Entre em contato conosco!</h2>
-            <p>Entre em contato com a Beautysalon, queremos tirar as suas dúvidas, ouvir as suas críticas e sugestões.</p>
-            <!-- '_blank' opens a new page without leaving de current or the original page  -->
-            <a href="https://api.whatsapp.com/send?phone=+5511998456754&text=Olá, gostaria de agendar um horário." class="button" target="_blank"><i class="icon-phone"></i> Entrar em contato</a>
-          </div><br>
+      <div class="container grid">
+        <div class="text">
+          <h2 class="title">Entre em contato conosco!</h2>
+          <p>
+            Entre em contato com a Beautysalon, queremos tirar as suas dúvidas, ouvir as suas críticas e sugestões.
+          </p>
+          <!-- '_blank' opens a new page without leaving de current or the original page  -->
+          <a 
+            href="https://api.whatsapp.com/send?phone=+5511998456754&text=Olá, gostaria de agendar um horário." 
+            class="button" 
+            target="_blank"
+            ><i class="icon-phone"></i> Entrar em contato</a
+          >
         </div>
-      <div class="links">
-        <ul class="grid">
-          <li><i class="icon-phone"></i> 11 99845-6754</li>
-          <li><i class="icon-map-pin"></i> Rua Amaury Souza, 346 - São Paulo - SP</li>
-          <li><i class="icon-mail"></i> contato@beautysalon.com</li>
-        </ul>
+        <div class="links">
+          <ul class="grid">
+            <li><i class="icon-phone"></i> 11 99845-6754</li>
+            <li><i class="icon-map-pin"></i> Rua Amaury Souza, 346 - São Paulo - SP</li>
+            <li><i class="icon-mail"></i> contato@beautysalon.com</li>
+          </ul>
+        </div>
       </div>
     </section>
     </main>
     <!-- Swiper must be above, because my js needs it to work-->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    
+    <!-- scrollreviewjs -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- main.js -->
     <script src="main.js"></script>
   </body>
