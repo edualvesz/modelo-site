@@ -30,4 +30,12 @@ window.addEventListener('scroll', function(){
   }
 })
 
-/* Testimonials caroussel slider swiper */
+/* Testimonials caroussel slider swiper, here its has been used the swiper API */
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true
+})

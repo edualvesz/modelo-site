@@ -9,6 +9,9 @@
     <!-- ICONS -->
     <link rel="stylesheet" href="assets/fonts/style.css">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
     <!-- STYLES -->
     <link rel="stylesheet" href="style.css" />
 
@@ -16,8 +19,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"/>
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   </head>
   <body>
     <header id="header">
@@ -107,63 +108,65 @@
       <!-- TESTIMONIAL -->
 
       <section class="section" id="testimonials">
-        <div class="container grid">
+        <div class="container swiper">
           <header>
             <h2 class="title">Depoimentos de quem já passou por aqui</h2>
-            <div class="testimonials">
-              <div class="testimonial">
-                <blockquote>
-                  <p>
-                    <span>&ldquo;</span> <!-- changes the way of quotation marks -->
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                  </p>
-                  <cite> <!-- "cite" lets the name of person in italic -->
-                    <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="Foto de Wanessa Souza">
-                      Wanessa Souza
-                  </cite>
-                </blockquote>
+          </header>
+            <div class="testimonials swiper-container">
+              <div class="swiper-wrapper">
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <p>
+                      <span>&ldquo;</span> <!-- changes the way of quotation marks -->
+                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </p>
+                    <cite> <!-- "cite" lets the name of person in italic -->
+                      <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="Foto de Wanessa Souza">
+                        Wanessa Souza
+                    </cite>
+                  </blockquote>
+                </div> 
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <p>
+                      <span>&ldquo;</span> 
+                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </p>
+                    <cite>
+                      <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Foto da Franciele Venega">
+                        Franciele Venega
+                    </cite>
+                  </blockquote>
+                </div> 
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <p>
+                      <span>&ldquo;</span> 
+                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </p>
+                    <cite>
+                      <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="Foto da Valeska Fabris">
+                        Valeska Fabris
+                    </cite>
+                  </blockquote>
+                </div>
               </div>
-
-              <div class="testimonial">
-                <blockquote>
-                  <p>
-                    <span>&ldquo;</span> 
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                  </p>
-                  <cite>
-                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Foto da Franciele Venega">
-                      Franciele Venega
-                  </cite>
-                </blockquote>
-              </div>
-
-              <div class="testimonial">
-                <blockquote>
-                  <p>
-                    <span>&ldquo;</span> 
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                  </p>
-                  <cite>
-                    <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="Foto da Valeska Fabris">
-                      Valeska Fabris
-                  </cite>
-                </blockquote>
-              </div>
-
               <div class="testimonial"></div>
               <div class="testimonial"></div>
             </div>
-          </header>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
         </div>
       </section>
 
       <!-- CONTACT -->
       
     </main>
-    <!-- Swiper -->
+    <!-- Swiper must be above, because my js needs it to work-->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- main.js -->
     <script src="main.js"></script>

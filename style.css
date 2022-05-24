@@ -402,3 +402,13 @@ nav.show div.icon-close{
   clip-path: circle(); /* turns image in a circular format */
   margin-right: 0.5rem;
 }
+
+/* swiper */
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
