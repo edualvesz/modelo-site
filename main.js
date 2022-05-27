@@ -58,3 +58,5 @@ scrollReveal.reveal(
   `,
   { interval: 100 }
 )
+
+/* Button back to top */
