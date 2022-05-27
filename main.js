@@ -60,3 +60,12 @@ scrollReveal.reveal(
 )
 
 /* Button back to top */
+/* when the page is scrolling down the button will appear, see more at class four at 0:39 min*/
+const backToTopButton = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function(){
+  if(window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+})
