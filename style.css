@@ -478,8 +478,8 @@ footer i {
 
 footer .social a {
 margin-right: 2rem;
-transition: .3s; /* without transition it won't move */
-display: inline-block;
+transition: .3s; /* without transition the icons won't move */
+display: inline-block; /* makes the icons move */
 }
 
 footer .social a:hover {
