@@ -18,17 +18,16 @@ for (const link of links) {
   })
 }
 
-/* changes page's header when its scrolled*/
-const header = document.querySelector("#header")
-const navHeight = header.offsetHeight
-
-window.addEventListener('scroll', function(){
+function changeHeaderWhenScroll(){
+  /* changes page's header when its scrolled*/
+  const header = document.querySelector("#header")
+  const navHeight = header.offsetHeight
   if(window.scrollY >= navHeight){
     header.classList.add('scroll')
   } else {
     header.classList.remove('scroll')
   }
-})
+}
 
 /* Testimonials caroussel slider swiper, here its has been used the swiper API */
 const swiper = new Swiper('.swiper-container', {
@@ -60,4 +59,18 @@ scrollReveal.reveal(
   { interval: 100 }
 )
 
-/* Button back to top */
+function backToTop(){
+  const backToTopButton = document.querySelector('.back-to-top')
+
+  if(window.scrollY >= 560){
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+/* when scroll */
+window.addEventListener('scroll', function(){
+  changeHeaderWhenScroll()
+  backToTop()
+})

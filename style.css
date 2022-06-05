@@ -479,11 +479,11 @@ footer i {
 footer .social a {
 margin-right: 2rem;
 transition: .3s; /* without transition the icons won't move */
-display: inline-block; /* makes the icons move */
+display: inline-block; 
 }
 
 footer .social a:hover {
-  transform: translateY(-15px);
+  transform: translateY(-8px); /* makes the icons jump */
 }
 
 /* back to top */
