@@ -30,6 +30,10 @@ img {
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
 }
 
 /*=========================== BASE =========================*/
@@ -102,10 +106,6 @@ body {
 
 #header.scroll {
   box-shadow:  0px 0px 12px rgba(0, 0, 0, 0.15);
-}
-
-main {
-  margin-top: calc(var(--header-height) + 2rem); /*don't forget that for every sisteen pixels is equal to one REM */
 }
 
 /*=========================== LOGO =========================*/
@@ -213,11 +213,15 @@ nav.show ul.grid {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 4.5rem 0;  
 }
 
 .section .title {
   margin-bottom: 1rem;
+}
+
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
 }
 
 .section header {
@@ -476,6 +480,11 @@ footer i {
   color: var(--text-color-light);
 }
 
+footer .social {
+  grid-auto-flow: column;
+  width: fit-content;
+}
+
 footer .social a {
 margin-right: 2rem;
 transition: .3s; /* without transition the icons won't move */
@@ -511,4 +520,23 @@ footer .social a:hover {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ====================MEDIA QUERIES======================= */
+/* media queries is responsible to add breakpoints to make the page adjust in different kinds of devices */
+@media (min-width: 1200px){
+  .section {
+    padding: 10rem 0;
+  }
+
+  main {
+    margin-top: var(--header-height); /*don't forget that for every sisteen pixels is equal to one REM */
+  }
+}
+
+@media (min-width: 992px){
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
 }
