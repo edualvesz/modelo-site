@@ -79,6 +79,26 @@ function backToTop(){
 const sections = document.querySelectorAll('main section[id]') /* selects all sections that contains an id */
 function activateMenuAtCurrentSection(){
 
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4 /* it gonna takes all window size */
+
+  for (const section of sections){
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
+
+    const checkpointStart = checkpoint >= sectionTop
+    const checkpointEnd = checkpoint <=sectionTop + sectionHeight
+
+    if(checkpointStart && checkpointEnd) {
+      document
+      .querySelector('nav ul li a[href*=' + sectionId + ']')
+      .classList.add('active')
+    } else {
+      document
+      .querySelector('nav ul li a[href*=' + sectionId + ']')
+      .classList.remove('active')
+    }
+  }
 }
 
 
