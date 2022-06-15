@@ -56,7 +56,7 @@ body {
 .title {
   font: 700 var(--title-font-size) var(--title-font);
   color: var(--title-color);
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: auto;
 }
 
 .button {
@@ -112,7 +112,7 @@ body {
 }
 
 main {
-  margin-top: calc(var(--header-height) + 2rem); /*don't forget that for every sisteen pixels is equal to one REM */
+  margin-top: calc(var(--header-height) + 2rem); /*don't forget that for every sixteen pixels is equal to one REM */
 }
 
 /*=========================== LOGO =========================*/
@@ -522,47 +522,123 @@ footer .social a:hover {
 
 /*=========================== MEDIA QUERIES =========================*/
 /* extra large divices: 1200 > */
-@media (min-width: 1200px){
-  .section  {
-    padding: 10rem 0;
+  @media (min-width: 1200px){
+    /* reusable classes */
+    .container {
+      max-width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section  {
+      padding: 10rem 0;
+    }
+    .section header,
+    #testimonials header {
+      max-width: 32rem;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .button {
+      height: 3.125rem;
+    }
+
+  /* navigation */
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul{
+    display: flex;
+    gap: 2rem;
+  }
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  /* layout */
+  main {
+    margin-top: var(--header-height);
+  }
+
+  /* home */
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  /* about */
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column; /* turns the section in columns */
+  }
+
+  /* services */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr; /* fr means fraction, a flexible thing, the space here was took and divided in three equal spaces */
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* testimonials */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* contact */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /* footer */
+  footer .section {
+    padding: 3.75rem 0;
+  }
+
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 2.25rem;
+  }
+}
+/* large devices: 1023 > */
+/* large devices: 992 > */
+@media (main-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
   }
 }
 
-nav .menu {
-  opacity: 1;
-  visibility: visible;
-  top: 0;
-}
-
-nav .menu ul{
-  display: flex;
-  gap: 2rem;
-}
- nav .menu ul li a.title {
-   font: 400 1rem var(--body-font);
- }
-
- nav .icon-menu {
-  display: none;
- }
-
-main {
-  margin-top: var(--header-height);
-}
-
-/* home */
-#home .container {
-  grid-auto-flow: column;
-  justify-content: space-between;
-}
-
-#home .image {
-  order: 1;
-}
-
-#home .text {
-  order: 0;
-}
-
-/* large devices: 1023 > */
-/* large devices: 992 > */
+/* medium devices: 767 > */

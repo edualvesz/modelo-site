@@ -18,10 +18,10 @@ for (const link of links) {
   })
 }
 
+const header = document.querySelector("#header")
+const navHeight = header.offsetHeight
 function changeHeaderWhenScroll(){
   /* changes page's header when its scrolled*/
-  const header = document.querySelector("#header")
-  const navHeight = header.offsetHeight
   if(window.scrollY >= navHeight){
     header.classList.add('scroll')
   } else {
@@ -36,7 +36,13 @@ const swiper = new Swiper('.swiper-container', {
     el: '.swiper-pagination'
   },
   mousewheel: true,
-  keyboard: true
+  keyboard: true,
+  breakpoints: { /* placed the swiper containers side by side */
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true,
+    }
+  }
 })
 
 /* ScrollReveal: shows elements when the page is scrolled*/
@@ -59,8 +65,8 @@ scrollReveal.reveal(
   { interval: 100 }
 )
 
+const backToTopButton = document.querySelector('.back-to-top')
 function backToTop(){
-  const backToTopButton = document.querySelector('.back-to-top')
 
   if(window.scrollY >= 560){
     backToTopButton.classList.add('show')
@@ -69,8 +75,17 @@ function backToTop(){
   }
 }
 
+/*active menu according to page section*/
+const sections = document.querySelectorAll('main section[id]') /* selects all sections that contains an id */
+function activateMenuAtCurrentSection(){
+
+}
+
+
 /* when scroll */
 window.addEventListener('scroll', function(){
   changeHeaderWhenScroll()
   backToTop()
+  activateMenuAtCurrentSection()
 })
+
